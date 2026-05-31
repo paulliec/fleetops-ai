@@ -1,0 +1,6 @@
+anthropic
+langgraph
+snowflake-connector-python
+streamlit
+python-dotenv
+pytest
