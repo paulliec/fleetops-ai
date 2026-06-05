@@ -47,3 +47,8 @@ Senior data engineer, strong Python/Snowflake/Azure, used LangChain before but n
   - Don't over-engineer error handling for simple cases
   - Skip docstrings on trivial functions
   - Don't add "as a best practice" type comments
+
+  ## Future enhancements (not in scope now)
+- Shift-aware staffing (12hr shifts, cross-shift handoffs, duty-time limits, coverage gaps at shift boundaries)
+- Maintenance consolidation feasibility config (which checks can be done together, at which bases)
+- Condition-based maintenance and environmental interval adjustments

@@ -7,3 +7,6 @@ venv/
 dist/
 build/
 .streamlit/secrets.toml
+*.p8
+*.pub
+rsa_key*

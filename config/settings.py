@@ -14,10 +14,11 @@ class Settings:
     anthropic_api_key: str = getenv("ANTHROPIC_API_KEY", "")
     snowflake_account: str = getenv("SNOWFLAKE_ACCOUNT", "")
     snowflake_user: str = getenv("SNOWFLAKE_USER", "")
-    snowflake_password: str = getenv("SNOWFLAKE_PASSWORD", "")
+    snowflake_private_key_path: str = getenv("SNOWFLAKE_PRIVATE_KEY_PATH", "")
     snowflake_warehouse: str = getenv("SNOWFLAKE_WAREHOUSE", "")
     snowflake_database: str = getenv("SNOWFLAKE_DATABASE", "")
     snowflake_schema: str = getenv("SNOWFLAKE_SCHEMA", "")
+    snowflake_role: str = getenv("SNOWFLAKE_ROLE", "")
 
 
 settings = Settings()
