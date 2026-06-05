@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python -m data.generate_synthetic)",
+      "Bash(where py *)",
+      "Bash(where python3 *)",
+      "Bash(py -m data.generate_synthetic)",
+      "Bash(python3 -m data.generate_synthetic)",
+      "Bash(py -3 -m data.generate_synthetic)",
+      "Bash(py -3 *)"
+    ]
+  }
+}

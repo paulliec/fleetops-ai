@@ -1,0 +1,7 @@
+base_id,name,icao_code,lat,lon,region,timezone
+1,Southeast Medevac Center,KPDK,33.88,-84.3,Southeast,US/Eastern
+2,Mountain West Hub,KAPA,39.57,-104.85,Mountain,US/Mountain
+3,Midwest Logistics Center,KMKC,39.12,-94.59,Midwest,US/Central
+4,Northeast Air Operations,KTEB,40.85,-74.06,Northeast,US/Eastern
+5,Southwest Regional Hub,KDVT,33.69,-112.08,Southwest,US/Arizona
+6,Gulf Coast Operations,KHOU,29.65,-95.28,Gulf Coast,US/Central
