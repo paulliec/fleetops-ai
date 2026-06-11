@@ -1,117 +1,117 @@
 crew_id,name,rank,role,base_id,status,qualifications,total_flight_hours
-1,Chris Harris,MAJ,sensor_operator,1,available,['MQ-9A'],2789.0
-2,Amanda Williams,CW3,sensor_operator,1,available,['MQ-9A'],4417.9
-3,Nicole Martinez,SSG,loadmaster,1,available,['C-17'],4116.9
-4,Eric Jackson,MSG,sensor_operator,1,available,['RQ-4B'],2231.1
-5,Kimberly Scott,SFC,copilot,1,available,"['KC-135', 'C-130J', 'UH-60M']",2367.1
-6,Michelle Williams,LTC,copilot,1,available,['C-17'],3024.5
-7,Sarah Lewis,1LT,pilot,1,available,['MQ-9A'],4326.2
-8,Samantha Anderson,MSG,pilot,1,deployed,"['RQ-4B', 'KC-135', 'C-130J']",2965.8
-9,David Davis,CW3,copilot,1,available,"['UH-60M', 'C-17']",2233.2
-10,Sarah Adams,CPT,flight_nurse,1,deployed,"['C-130J', 'UH-60M']",1393.6
-11,Lisa Young,CPT,copilot,1,available,"['UH-60M', 'C-17', 'KC-135']",2327.0
-12,Travis Johnson,LTC,sensor_operator,1,medical,['RQ-4B'],998.3
-13,Sarah Jackson,CW4,flight_nurse,1,available,"['C-130J', 'UH-60M']",1473.0
-14,Aisha Harris,1LT,flight_nurse,1,available,"['UH-60M', 'C-130J']",2980.1
-15,Sarah Garcia,SFC,sensor_operator,1,available,['MQ-9A'],4613.1
-16,Chris Martinez,CPT,sensor_operator,1,on_leave,['RQ-4B'],3056.2
-17,Nicole Chen,CW4,copilot,1,available,"['C-17', 'C-130J']",3355.4
-18,Samantha Wright,CW4,sensor_operator,1,available,"['MQ-9A', 'RQ-4B']",828.2
-19,James Campbell,MSG,flight_nurse,2,available,['C-130J'],4981.3
-20,Carlos Hill,LTC,pilot,2,on_leave,"['MQ-9A', 'C-130J', 'C-17']",1973.7
-21,Heather Johnson,SFC,copilot,2,available,"['C-17', 'C-130J']",1637.0
-22,Emily Davis,MAJ,pilot,2,deployed,['C-130J'],1507.3
-23,Samantha Walker,CW2,sensor_operator,2,available,['MQ-9A'],4545.6
-24,Rachel Chen,MAJ,pilot,2,available,['C-17'],3258.1
-25,Sean Hall,CPT,loadmaster,2,available,['C-17'],561.2
-26,Laura Anderson,CW3,copilot,2,available,"['CH-47F', 'C-130J', 'C-17']",4515.1
-27,Nicole Davis,SFC,pilot,2,available,"['MQ-9A', 'C-130J']",4443.8
-28,Nicole Jackson,MAJ,flight_nurse,2,medical,['C-130J'],4430.8
-29,Nathan Robinson,CPT,pilot,2,available,['C-130J'],2036.2
-30,Megan Hill,LTC,pilot,2,available,"['MQ-9A', 'CH-47F']",1270.0
-31,Michael Young,SFC,copilot,2,available,"['C-130J', 'C-17']",2118.5
-32,Emily Walker,CW2,sensor_operator,2,available,['MQ-9A'],383.6
-33,Jason Hall,SFC,sensor_operator,2,available,['MQ-9A'],755.1
-34,Robert Hall,SFC,sensor_operator,2,available,['MQ-9A'],3496.9
-35,Michelle Wright,CPT,copilot,2,available,"['C-130J', 'CH-47F']",3654.8
-36,Kimberly Allen,LTC,loadmaster,2,available,"['C-130J', 'C-17', 'CH-47F']",2218.1
-37,Heather King,1LT,flight_nurse,2,available,['C-130J'],1658.6
-38,Megan Rivera,LTC,copilot,2,available,"['C-17', 'C-130J']",2653.6
-39,Michelle Martinez,LTC,pilot,3,deployed,"['C-130J', 'UH-60M']",3429.4
-40,Maria Chen,SSG,copilot,3,available,['CH-47F'],3134.1
-41,Brian Green,LTC,pilot,3,available,"['KC-135', 'C-130J']",908.3
-42,Daniel White,SFC,pilot,3,deployed,['KC-135'],2429.8
-43,Megan Anderson,SFC,sensor_operator,3,deployed,['RQ-4B'],4941.9
-44,Heather Hall,SFC,sensor_operator,3,deployed,['RQ-4B'],2340.4
-45,Nicole Young,SFC,copilot,3,deployed,"['C-130J', 'UH-60M', 'CH-47F']",2526.1
-46,Tyler Robinson,CW3,copilot,3,available,"['C-130J', 'C-17']",4486.5
-47,Daniel Green,LTC,pilot,3,available,['RQ-4B'],508.3
-48,Sarah Clark,CW4,flight_nurse,3,deployed,"['UH-60M', 'C-130J']",4543.2
-49,Kyle Green,CW3,sensor_operator,3,available,['RQ-4B'],1633.3
-50,Daniel Young,1LT,flight_nurse,3,available,"['C-130J', 'UH-60M']",2066.5
-51,Carlos Williams,MSG,flight_nurse,3,on_leave,"['C-130J', 'UH-60M']",2909.1
-52,Laura Anderson,MAJ,pilot,3,on_leave,['UH-60M'],441.4
-53,Jason Lopez,CW4,flight_nurse,3,deployed,"['C-130J', 'UH-60M']",1535.6
-54,Maria Garcia,CW3,flight_nurse,3,medical,"['C-130J', 'UH-60M']",1276.3
-55,Brian Williams,LTC,pilot,3,available,"['C-17', 'UH-60M', 'RQ-4B']",805.9
-56,Jessica Jackson,CPT,pilot,3,available,"['RQ-4B', 'KC-135', 'CH-47F']",3933.4
-57,Angela Green,LTC,loadmaster,4,available,['CH-47F'],564.8
-58,Derek Wilson,MSG,copilot,4,deployed,['C-130J'],3956.6
-59,Michael Lopez,CW4,loadmaster,4,available,"['C-130J', 'CH-47F']",4147.2
-60,Aisha Hall,SFC,pilot,4,available,"['KC-135', 'C-130J']",4834.3
-61,Laura Young,LTC,loadmaster,4,available,"['C-130J', 'CH-47F']",4187.5
-62,Megan Green,SSG,pilot,4,available,"['C-130J', 'CH-47F']",4284.6
-63,Marcus Lopez,MSG,copilot,4,available,"['KC-135', 'UH-60M']",3565.7
-64,Jennifer Robinson,SSG,loadmaster,4,deployed,"['CH-47F', 'C-130J']",2864.8
-65,Sean Williams,LTC,copilot,4,available,"['UH-60M', 'C-130J', 'KC-135']",2141.1
-66,Diana Hill,SFC,copilot,4,available,"['C-130J', 'KC-135']",1787.8
-67,Daniel Wilson,CW3,flight_nurse,4,deployed,"['UH-60M', 'C-130J']",773.9
-68,Samantha Mitchell,MSG,sensor_operator,4,available,"['RQ-4B', 'MQ-9A']",4887.7
-69,Brian Allen,MAJ,sensor_operator,4,available,"['MQ-9A', 'RQ-4B']",1650.9
-70,Robert Garcia,MAJ,sensor_operator,4,available,['MQ-9A'],3261.8
-71,Kyle Allen,SSG,flight_nurse,4,available,['C-130J'],1835.4
-72,Michael Adams,MSG,pilot,4,available,"['C-130J', 'RQ-4B']",3221.3
-73,Kyle King,LTC,pilot,4,available,['CH-47F'],768.6
-74,Sean Rivera,MSG,flight_nurse,4,available,"['C-130J', 'UH-60M']",4952.2
-75,Heather Davis,LTC,sensor_operator,5,on_leave,['MQ-9A'],3202.5
-76,Lisa Brown,CW4,loadmaster,5,available,"['C-17', 'C-130J', 'CH-47F']",2362.4
-77,Robert Lewis,CW2,sensor_operator,5,available,['MQ-9A'],3574.3
-78,Marcus Harris,SFC,flight_nurse,5,available,['C-130J'],1279.1
-79,Sarah Jackson,MSG,copilot,5,deployed,"['CH-47F', 'C-17']",3795.0
-80,Emily Campbell,CW4,sensor_operator,5,available,['MQ-9A'],4724.8
-81,Sean Martinez,CW4,sensor_operator,5,available,['MQ-9A'],3725.8
-82,Jennifer Lewis,MSG,sensor_operator,5,medical,['MQ-9A'],3018.2
-83,Eric Rivera,MAJ,pilot,5,on_leave,"['C-130J', 'C-17', 'UH-60M']",4985.3
-84,Eric Hill,CW3,flight_nurse,5,available,"['UH-60M', 'C-130J']",3416.6
-85,Amanda Allen,CW4,copilot,5,available,"['UH-60M', 'C-130J']",4105.1
-86,Jennifer Wright,CPT,sensor_operator,5,available,['MQ-9A'],4856.9
-87,Nathan Garcia,CW3,flight_nurse,5,available,"['C-130J', 'UH-60M']",3188.6
-88,Samantha Young,CW2,flight_nurse,5,available,"['UH-60M', 'C-130J']",2303.0
-89,Derek Robinson,CW2,flight_nurse,5,deployed,['C-130J'],2844.0
-90,Daniel Wilson,CPT,sensor_operator,5,available,['MQ-9A'],3309.0
-91,Rachel Baker,SSG,copilot,5,deployed,"['C-130J', 'UH-60M']",1369.9
-92,Brian Anderson,CW2,sensor_operator,5,on_leave,['MQ-9A'],3908.8
-93,Tyler King,MSG,flight_nurse,5,deployed,"['UH-60M', 'C-130J']",4994.7
-94,Travis Mitchell,SFC,flight_nurse,5,available,['UH-60M'],3861.8
-95,Kyle Green,CW4,flight_nurse,6,available,"['C-130J', 'UH-60M']",409.5
-96,Aisha Carter,MAJ,flight_nurse,6,medical,"['UH-60M', 'C-130J']",2611.0
-97,Sean Davis,SSG,sensor_operator,6,available,['RQ-4B'],273.7
-98,Eric Walker,CW4,copilot,6,available,"['KC-135', 'C-17']",3319.2
-99,Amanda Chen,LTC,loadmaster,6,available,"['C-130J', 'C-17']",3229.6
-100,Laura Davis,CPT,loadmaster,6,deployed,['C-17'],2329.7
-101,Jason Garcia,CW3,loadmaster,6,available,['C-17'],2267.3
-102,Kevin White,CW4,copilot,6,available,"['UH-60M', 'C-130J', 'C-17']",3174.6
-103,Megan Walker,1LT,copilot,6,available,"['KC-135', 'C-17']",4514.8
-104,Sean Hill,CW2,flight_nurse,6,medical,"['C-130J', 'UH-60M']",3266.9
-105,Angela Harris,SSG,flight_nurse,6,medical,"['UH-60M', 'C-130J']",711.9
-106,Tyler Williams,CW4,flight_nurse,6,medical,"['UH-60M', 'C-130J']",1517.5
-107,Derek Carter,CW2,sensor_operator,6,deployed,['RQ-4B'],3923.6
-108,Heather Walker,MAJ,copilot,6,available,"['C-130J', 'C-17', 'UH-60M']",3215.6
-109,Tiffany Scott,CPT,pilot,6,deployed,"['C-130J', 'C-17']",4566.2
-110,Brian Anderson,CW3,loadmaster,6,deployed,"['C-130J', 'C-17']",2748.1
-111,Eric Allen,CW3,loadmaster,6,deployed,['C-130J'],4060.3
-112,Daniel Adams,SFC,flight_nurse,6,medical,['C-130J'],1955.7
-113,Travis Wilson,CW2,flight_nurse,6,available,['UH-60M'],3005.9
-114,Eric Williams,SFC,loadmaster,6,available,['C-17'],1774.4
-115,Megan King,CPT,sensor_operator,6,available,['RQ-4B'],870.9
-116,David Robinson,MAJ,pilot,6,on_leave,"['C-130J', 'C-17']",2065.5
+1,Aisha Scott,Line Pilot,pilot,1,on_assignment,"['EC135', 'King Air 350', 'AW139']",4776.8
+2,Emily Scott,Senior Captain,pilot,1,on_leave,"['EC135', 'PC-12', 'Bell 407']",1349.4
+3,Michael Anderson,Check Airman,copilot,1,available,"['Bell 407', 'Citation CJ3', 'PC-12']",4744.9
+4,Laura Clark,Chief Pilot,copilot,1,on_leave,"['King Air 350', 'Citation CJ3']",3511.4
+5,Stephanie Rivera,First Officer,flight_nurse,1,available,"['EC135', 'AW139']",507.3
+6,James Brown,Captain,pilot,1,on_assignment,"['King Air 350', 'AW139', 'Citation CJ3']",1298.9
+7,Nicole Young,First Officer,pilot,1,available,"['Bell 407', 'King Air 350']",2788.3
+8,Nathan Harris,Chief Pilot,flight_paramedic,1,available,['AW139'],2269.0
+9,David Garcia,Senior Captain,flight_paramedic,1,available,"['AW139', 'Bell 407']",4042.8
+10,Brian Rivera,First Officer,pilot,1,available,['AW139'],1537.0
+11,Diana Davis,Line Pilot,copilot,1,available,['PC-12'],4212.9
+12,Nathan Carter,Check Airman,pilot,1,available,['AW139'],4531.7
+13,Marcus Campbell,Chief Pilot,copilot,1,available,"['Bell 407', 'PC-12']",4795.1
+14,Tyler Clark,Line Pilot,flight_paramedic,1,medical,['Bell 407'],3731.5
+15,Tiffany Mitchell,Line Pilot,pilot,1,available,"['EC135', 'Bell 407', 'King Air 350']",955.7
+16,Derek Brown,First Officer,pilot,1,available,['Bell 407'],2138.1
+17,Nathan Wright,First Officer,copilot,1,on_leave,"['King Air 350', 'Bell 407', 'Citation CJ3']",3414.7
+18,Kimberly Anderson,Senior Captain,flight_nurse,1,available,['EC135'],2394.7
+19,Travis Clark,First Officer,pilot,2,available,"['King Air 350', 'PC-12']",4679.6
+20,Tyler Jackson,Line Pilot,pilot,2,available,['EC135'],3577.0
+21,Carlos Walker,Captain,pilot,2,available,"['EC135', 'PC-12', 'King Air 350']",3763.6
+22,Samantha Lopez,Chief Pilot,copilot,2,available,"['EC135', 'PC-12']",4294.0
+23,Laura Young,Senior Captain,flight_paramedic,2,available,"['Bell 407', 'EC135']",3901.4
+24,Sean Hall,Captain,flight_nurse,2,available,['EC135'],561.2
+25,Laura Anderson,Senior Captain,copilot,2,available,"['King Air 350', 'Bell 407', 'PC-12']",4515.1
+26,Nicole Davis,Line Pilot,pilot,2,available,"['Bell 407', 'EC135']",4443.8
+27,Kevin White,Captain,flight_paramedic,2,on_leave,"['Bell 407', 'EC135']",1060.9
+28,Rachel Jackson,Captain,flight_nurse,2,on_assignment,"['EC135', 'King Air 350']",2036.2
+29,Megan Hill,First Officer,pilot,2,available,"['Bell 407', 'King Air 350']",1270.0
+30,Michael Young,Line Pilot,copilot,2,available,"['EC135', 'Bell 407']",2118.5
+31,Marcus White,Senior Captain,flight_nurse,2,available,['King Air 350'],383.6
+32,Derek Wilson,Line Pilot,flight_paramedic,2,available,"['EC135', 'Bell 407']",1112.4
+33,Jessica Hall,Chief Pilot,pilot,2,available,"['PC-12', 'King Air 350', 'EC135']",4619.7
+34,Nathan Wright,Senior Captain,flight_nurse,2,available,"['King Air 350', 'Bell 407', 'EC135']",2861.2
+35,Lisa King,Captain,copilot,2,available,"['PC-12', 'EC135']",1658.6
+36,Sean Rivera,Line Pilot,flight_paramedic,3,available,"['EC135', 'AW139', 'Bell 407']",2471.3
+37,Jennifer Robinson,First Officer,copilot,3,available,"['Bell 407', 'EC135', 'King Air 350']",4071.5
+38,Nicole Mitchell,Captain,copilot,3,available,['Bell 407'],2386.0
+39,Kimberly Robinson,Chief Pilot,copilot,3,available,"['Citation CJ3', 'PC-12', 'King Air 350']",226.6
+40,Stephanie Campbell,First Officer,pilot,3,available,"['AW139', 'Citation CJ3']",4603.9
+41,Stephanie Wright,Check Airman,pilot,3,medical,"['AW139', 'PC-12']",3140.7
+42,Sean Walker,Chief Pilot,flight_paramedic,3,on_assignment,"['AW139', 'Bell 407', 'EC135']",1531.1
+43,Michael Allen,Senior Captain,flight_paramedic,3,available,"['Bell 407', 'AW139', 'EC135']",1734.6
+44,Daniel Green,Chief Pilot,pilot,3,available,['AW139'],1227.0
+45,Nathan Garcia,Check Airman,flight_paramedic,3,available,"['AW139', 'EC135']",2069.5
+46,Ryan King,Check Airman,pilot,3,on_assignment,"['PC-12', 'Citation CJ3', 'Bell 407']",2783.5
+47,Laura Carter,Senior Captain,copilot,3,available,"['AW139', 'EC135']",3410.6
+48,Heather Williams,Line Pilot,flight_paramedic,3,on_leave,"['Bell 407', 'AW139', 'EC135']",2909.1
+49,Laura Anderson,First Officer,pilot,3,on_leave,['Citation CJ3'],441.4
+50,Jason Lopez,Check Airman,flight_paramedic,3,on_assignment,"['Bell 407', 'AW139']",1535.6
+51,Maria Garcia,Senior Captain,flight_paramedic,3,medical,"['Bell 407', 'AW139']",1276.3
+52,Brian Williams,First Officer,pilot,3,available,"['Bell 407', 'Citation CJ3', 'AW139']",805.9
+53,Jessica Jackson,Chief Pilot,pilot,3,available,"['AW139', 'PC-12', 'EC135']",3648.1
+54,Maria King,Check Airman,copilot,3,available,"['Bell 407', 'King Air 350']",2103.9
+55,Angela Wilson,Line Pilot,pilot,4,on_assignment,"['AW139', 'Bell 407', 'EC135']",3956.6
+56,Michael Lopez,Check Airman,flight_nurse,4,available,"['King Air 350', 'EC135', 'AW139']",4147.2
+57,Aisha Hall,Line Pilot,pilot,4,available,"['EC135', 'PC-12']",4834.3
+58,Tiffany Young,First Officer,flight_nurse,4,available,"['King Air 350', 'AW139', 'EC135']",4187.5
+59,Megan Green,Check Airman,pilot,4,available,"['PC-12', 'AW139']",4284.6
+60,Marcus Lopez,Line Pilot,copilot,4,available,"['AW139', 'EC135']",3565.7
+61,Jennifer Robinson,Check Airman,flight_nurse,4,on_assignment,"['Bell 407', 'EC135', 'King Air 350']",2864.8
+62,Maria Martinez,Check Airman,copilot,4,available,"['PC-12', 'King Air 350', 'AW139']",3520.6
+63,Laura Lopez,Check Airman,flight_nurse,4,available,"['EC135', 'AW139', 'King Air 350']",1500.4
+64,Brian Wright,Line Pilot,flight_nurse,4,available,['Bell 407'],4764.2
+65,Eric Young,Line Pilot,copilot,4,on_assignment,['AW139'],3064.6
+66,Daniel Scott,Captain,pilot,4,available,['EC135'],3598.5
+67,Diana Allen,First Officer,copilot,4,available,"['Bell 407', 'King Air 350']",3261.8
+68,Kyle Allen,Check Airman,flight_paramedic,4,available,['Bell 407'],1835.4
+69,Michael Adams,Line Pilot,pilot,4,available,"['PC-12', 'Bell 407']",3221.3
+70,Kyle King,First Officer,pilot,4,available,['AW139'],768.6
+71,Sean Rivera,Line Pilot,flight_paramedic,4,available,"['EC135', 'Bell 407', 'AW139']",4952.2
+72,Samantha Clark,Captain,flight_nurse,4,available,"['Bell 407', 'EC135', 'King Air 350']",953.9
+73,Nathan Rivera,Check Airman,copilot,4,available,"['Bell 407', 'AW139', 'King Air 350']",1598.0
+74,Michael Lewis,Chief Pilot,flight_nurse,5,on_leave,"['EC135', 'King Air 350', 'AW139']",3031.0
+75,Aisha Young,Captain,copilot,5,on_assignment,"['Bell 407', 'AW139']",486.3
+76,Megan King,Senior Captain,flight_nurse,5,available,"['EC135', 'AW139', 'Bell 407']",2602.3
+77,Laura Wright,Captain,flight_paramedic,5,available,"['Bell 407', 'EC135']",638.4
+78,Eric Rivera,First Officer,pilot,5,on_leave,"['EC135', 'Bell 407', 'PC-12']",4985.3
+79,Ryan Baker,Chief Pilot,flight_paramedic,5,available,"['AW139', 'Bell 407', 'EC135']",702.1
+80,Tyler Adams,Line Pilot,copilot,5,on_assignment,"['PC-12', 'King Air 350']",376.1
+81,Emily Adams,Captain,pilot,5,on_leave,"['EC135', 'King Air 350']",3356.8
+82,Stephanie Scott,Check Airman,flight_paramedic,5,available,"['Bell 407', 'EC135']",3202.0
+83,Diana Anderson,Check Airman,pilot,5,on_leave,['EC135'],4428.1
+84,Derek Robinson,Senior Captain,flight_paramedic,5,on_assignment,['Bell 407'],2844.0
+85,Emily Campbell,Chief Pilot,flight_paramedic,5,on_leave,['Bell 407'],4194.3
+86,Eric Mitchell,Line Pilot,flight_paramedic,5,available,"['AW139', 'EC135', 'Bell 407']",894.3
+87,Rachel Baker,Line Pilot,copilot,5,available,"['King Air 350', 'AW139', 'Bell 407']",1482.4
+88,Aisha Rivera,Senior Captain,pilot,5,available,"['EC135', 'PC-12']",1795.7
+89,Nicole Green,Check Airman,flight_paramedic,5,available,"['AW139', 'Bell 407']",409.5
+90,Amanda Chen,Line Pilot,flight_paramedic,5,available,"['AW139', 'EC135', 'Bell 407']",1793.6
+91,James Thomas,Chief Pilot,pilot,5,available,"['Bell 407', 'PC-12']",4855.8
+92,Heather Adams,Senior Captain,pilot,5,available,"['EC135', 'King Air 350']",4291.2
+93,Heather Brown,Chief Pilot,flight_paramedic,6,available,"['AW139', 'Bell 407']",4620.5
+94,David Rivera,Senior Captain,copilot,6,available,"['Bell 407', 'King Air 350', 'Citation CJ3']",4536.4
+95,Ryan Scott,First Officer,pilot,6,available,"['Bell 407', 'PC-12']",2749.6
+96,Jennifer Green,First Officer,copilot,6,available,['AW139'],2588.8
+97,Marcus Campbell,Captain,copilot,6,available,['King Air 350'],4514.8
+98,Sean Hill,Senior Captain,flight_paramedic,6,medical,"['Bell 407', 'AW139']",3266.9
+99,Angela Harris,Check Airman,flight_paramedic,6,medical,"['AW139', 'Bell 407']",711.9
+100,Tyler Williams,Chief Pilot,flight_paramedic,6,medical,"['AW139', 'Bell 407']",2099.9
+101,Daniel Hill,First Officer,pilot,6,available,"['Bell 407', 'King Air 350', 'AW139']",3180.3
+102,Sean Chen,Chief Pilot,copilot,6,available,"['Bell 407', 'Citation CJ3', 'AW139']",830.8
+103,Lisa Harris,Line Pilot,flight_nurse,6,available,"['King Air 350', 'AW139']",4407.0
+104,Marcus Mitchell,Senior Captain,flight_nurse,6,medical,"['King Air 350', 'AW139', 'Bell 407']",3783.5
+105,Michael Thomas,First Officer,flight_nurse,6,on_assignment,['AW139'],4328.7
+106,Kimberly Johnson,Captain,flight_paramedic,6,available,"['AW139', 'Bell 407']",2383.0
+107,Daniel Mitchell,Line Pilot,flight_nurse,6,available,"['AW139', 'King Air 350', 'Bell 407']",1774.4
+108,Angela Baker,Captain,copilot,6,available,"['Bell 407', 'King Air 350', 'PC-12']",4742.1
+109,Nicole Anderson,Senior Captain,flight_nurse,6,available,"['Bell 407', 'King Air 350']",3418.3
+110,David Carter,Senior Captain,flight_paramedic,6,available,"['Bell 407', 'AW139']",357.0
+111,Sean Robinson,Captain,flight_nurse,6,on_leave,['AW139'],4908.5
+112,Kimberly Young,Captain,flight_nurse,6,available,"['King Air 350', 'AW139', 'Bell 407']",4755.3
+113,Derek Williams,Senior Captain,flight_paramedic,6,available,['Bell 407'],1369.1
+114,Samantha Clark,First Officer,copilot,6,on_assignment,"['AW139', 'Bell 407', 'PC-12']",1777.1
+115,Carlos Walker,Captain,copilot,6,on_assignment,"['Bell 407', 'PC-12', 'Citation CJ3']",3373.1
+116,Ryan Robinson,Captain,pilot,6,available,['Bell 407'],1036.4

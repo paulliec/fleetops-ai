@@ -29,35 +29,33 @@ BASES = [
 
 # type -> (category, engine_interval_hrs, airframe_interval_hrs, avionics_check_days, typical_speed_kts)
 AIRCRAFT_TYPES = {
-    "C-130J":  ("fixed_wing",  1500, 3000, 180, 320),
-    "C-17":    ("fixed_wing",  2000, 4000, 180, 450),
-    "KC-135":  ("fixed_wing",  1800, 3500, 180, 480),
-    "UH-60M":  ("rotary",       800, 1500, 120, 150),
-    "CH-47F":  ("rotary",       900, 1800, 120, 160),
-    "MQ-9A":   ("uav",         1200, 2500, 90,  200),
-    "RQ-4B":   ("uav",         1500, 3000, 90,  340),
+    "King Air 350":  ("fixed_wing", 1500, 3000, 180, 310),
+    "PC-12":         ("fixed_wing", 1200, 2400, 180, 270),
+    "Citation CJ3":  ("fixed_wing", 1800, 3500, 180, 415),
+    "Bell 407":      ("rotary",      800, 1500, 120, 140),
+    "EC135":         ("rotary",      600, 1200, 120, 135),
+    "AW139":         ("rotary",      900, 1800, 120, 165),
 }
 
 # distribution of 50 aircraft across types
 AIRCRAFT_DISTRIBUTION = {
-    "C-130J": 10, "C-17": 6, "KC-135": 6,
-    "UH-60M": 10, "CH-47F": 6,
-    "MQ-9A": 8, "RQ-4B": 4,
+    "King Air 350": 10, "PC-12": 8, "Citation CJ3": 6,
+    "Bell 407": 10, "EC135": 8, "AW139": 8,
 }
 
-RANKS = ["1LT", "CPT", "MAJ", "LTC", "CW2", "CW3", "CW4", "SSG", "SFC", "MSG"]
-ROLES = ["pilot", "copilot", "loadmaster", "flight_nurse", "sensor_operator"]
+RANKS = ["Captain", "First Officer", "Senior Captain", "Check Airman",
+         "Line Pilot", "Chief Pilot"]
+ROLES = ["pilot", "copilot", "flight_nurse", "flight_paramedic"]
 
 # role -> which aircraft types they can be qualified on
 ROLE_AIRCRAFT = {
-    "pilot":           list(AIRCRAFT_TYPES.keys()),
-    "copilot":         ["C-130J", "C-17", "KC-135", "UH-60M", "CH-47F"],
-    "loadmaster":      ["C-130J", "C-17", "CH-47F"],
-    "flight_nurse":    ["UH-60M", "C-130J"],
-    "sensor_operator": ["MQ-9A", "RQ-4B"],
+    "pilot":            list(AIRCRAFT_TYPES.keys()),
+    "copilot":          list(AIRCRAFT_TYPES.keys()),
+    "flight_nurse":     ["Bell 407", "EC135", "AW139", "King Air 350"],
+    "flight_paramedic": ["Bell 407", "EC135", "AW139"],
 }
 
-MISSION_TYPES = ["cargo", "medevac", "isr", "training", "sar", "transport"]
+MISSION_TYPES = ["cargo", "medevac", "organ_transport", "charter", "repositioning"]
 PRIORITIES = ["routine", "urgent", "critical"]
 PRIORITY_WEIGHTS = [0.65, 0.25, 0.10]
 
@@ -96,7 +94,7 @@ def seasonal_multiplier(base_id, month):
 # linear trend: ~2% annual growth in demand
 def trend_multiplier(day_offset):
     """Slow upward trend over the 2-year window."""
-    return 1.0 + 0.02 * (day_offset / 365)
+    return 1.0 + 0.04 * (day_offset / 365)
 
 PRECIP_TYPES = ["none", "rain", "snow", "ice", "fog"]
 PRECIP_INTENSITY = [None, "light", "moderate", "heavy"]
@@ -142,18 +140,26 @@ def gen_bases():
     ]
 
 
+# N-number suffixes by type for realistic civilian tail numbers
+_TAIL_PREFIX = {
+    "King Air 350": "KB", "PC-12": "PC", "Citation CJ3": "CJ",
+    "Bell 407": "BH", "EC135": "EC", "AW139": "AW",
+}
+
+
 def gen_aircraft():
     aircraft = []
     aid = 1
     for atype, count in AIRCRAFT_DISTRIBUTION.items():
         cat, eng_int, af_int, av_days, _ = AIRCRAFT_TYPES[atype]
-        for _ in range(count):
+        prefix = _TAIL_PREFIX[atype]
+        for i in range(count):
             base = random.choice(BASES)
             commissioned = START_DATE - timedelta(days=random.randint(365, 3650))
             status = random.choices(["active", "grounded", "depot"], [0.82, 0.12, 0.06])[0]
             aircraft.append(dict(
                 aircraft_id=aid,
-                tail_number=f"{atype[:2].upper()}-{aid:04d}",
+                tail_number=f"N{100 + aid}{prefix}",
                 aircraft_type=atype,
                 category=cat,
                 home_base_id=base[0],
@@ -188,7 +194,7 @@ def gen_crew(aircraft_list):
             quals = random.sample(eligible, min(len(eligible), random.randint(1, 3)))
             name = f"{random.choice(FIRST_NAMES)} {random.choice(LAST_NAMES)}"
             status = random.choices(
-                ["available", "deployed", "on_leave", "medical"],
+                ["available", "on_assignment", "on_leave", "medical"],
                 [0.70, 0.15, 0.10, 0.05]
             )[0]
             crew.append(dict(
@@ -229,8 +235,8 @@ def gen_missions(aircraft_list):
             for _ in range(n_missions):
                 mtype = random.choice(MISSION_TYPES)
                 priority = random.choices(PRIORITIES, PRIORITY_WEIGHTS)[0]
-                # local ops for training/isr
-                dest = None if mtype in ("training", "isr") else random.choice(
+                # repositioning stays at home base
+                dest = None if mtype == "repositioning" else random.choice(
                     [b for b in BASES if b[0] != bid]
                 )
                 # prefer aircraft at this base, fall back to any active
@@ -249,8 +255,8 @@ def gen_missions(aircraft_list):
                     end_dt = None
                     status = random.choices(["planned", "active"], [0.6, 0.4])[0]
 
-                pax = random.randint(0, 80) if mtype in ("transport", "medevac", "sar") else None
-                cargo = round(random.uniform(0, 40), 1) if mtype == "cargo" else None
+                pax = random.randint(1, 8) if mtype in ("medevac", "organ_transport", "charter") else None
+                cargo = round(random.uniform(0.5, 20), 1) if mtype == "cargo" else None
 
                 missions.append(dict(
                     mission_id=mid,
@@ -583,6 +589,7 @@ def seed_end_states(aircraft, flight_logs):
         totals[fl["aircraft_id"]] = totals.get(fl["aircraft_id"], 0.0) + fl["flight_hours"]
 
     seeded = []
+    seeded_ids = set()
     next_fid = max(fl["flight_id"] for fl in flight_logs) + 1
 
     # find a high-hours active fixed wing, put it just under engine interval
@@ -617,13 +624,14 @@ def seed_end_states(aircraft, flight_logs):
                         next_fid += 1
                     new_total = hrs + needed
                     remaining = interval - (new_total % interval)
+                    seeded_ids.add(a["aircraft_id"])
                     seeded.append(f"  aircraft {a['aircraft_id']} ({a['tail_number']}): "
                                   f"~{round(remaining)} hrs to engine service")
                     break
 
     # find a rotary, inject flights to push it to high airframe hours
     for a in aircraft:
-        if a["category"] == "rotary" and a["status"] == "active":
+        if a["category"] == "rotary" and a["status"] == "active" and a["aircraft_id"] not in seeded_ids:
             current = totals.get(a["aircraft_id"], 0)
             target = a["airframe_inspection_interval_hours"] * 4.8
             needed = target - current
@@ -645,13 +653,14 @@ def seed_end_states(aircraft, flight_logs):
                         status="completed", delay_minutes=0, delay_reason=None,
                     ))
                     next_fid += 1
+            seeded_ids.add(a["aircraft_id"])
             seeded.append(f"  aircraft {a['aircraft_id']} ({a['tail_number']}): "
                           f"rotary at {round(target)} hrs (near airframe life limit)")
             break
 
-    # ground one aircraft with an overdue avionics check
+    # ground one rotary with an overdue avionics check
     for a in aircraft:
-        if a["status"] == "active" and a["category"] == "uav":
+        if a["status"] == "active" and a["category"] == "rotary" and a["aircraft_id"] not in seeded_ids:
             a["status"] = "grounded"
             seeded.append(f"  aircraft {a['aircraft_id']} ({a['tail_number']}): "
                           f"grounded, overdue avionics check")

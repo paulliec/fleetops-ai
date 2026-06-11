@@ -21,8 +21,8 @@ CREATE TABLE bases (
 CREATE TABLE aircraft (
     aircraft_id     INTEGER PRIMARY KEY,
     tail_number     VARCHAR(10) NOT NULL UNIQUE,
-    aircraft_type   VARCHAR(50) NOT NULL,       -- e.g. C-130J, UH-60M, MQ-9A
-    category        VARCHAR(20) NOT NULL,       -- fixed_wing | rotary | uav
+    aircraft_type   VARCHAR(50) NOT NULL,       -- e.g. King Air 350, Bell 407, EC135
+    category        VARCHAR(20) NOT NULL,       -- fixed_wing | rotary
     home_base_id    INTEGER NOT NULL REFERENCES bases(base_id),
     status          VARCHAR(20) NOT NULL DEFAULT 'active',  -- active | grounded | depot
     commissioned_date DATE NOT NULL,
@@ -37,10 +37,10 @@ CREATE TABLE crew (
     crew_id         INTEGER PRIMARY KEY,
     name            VARCHAR(100) NOT NULL,
     rank            VARCHAR(30) NOT NULL,
-    role            VARCHAR(30) NOT NULL,       -- pilot | copilot | loadmaster | flight_nurse | sensor_operator
+    role            VARCHAR(30) NOT NULL,       -- pilot | copilot | flight_nurse | flight_paramedic
     base_id         INTEGER NOT NULL REFERENCES bases(base_id),
-    status          VARCHAR(20) NOT NULL DEFAULT 'available',  -- available | deployed | on_leave | medical
-    qualifications  ARRAY,                      -- aircraft types qualified on, e.g. ['C-130J','C-17']
+    status          VARCHAR(20) NOT NULL DEFAULT 'available',  -- available | on_assignment | on_leave | medical
+    qualifications  ARRAY,                      -- aircraft types qualified on, e.g. ['Bell 407','EC135']
     total_flight_hours FLOAT NOT NULL DEFAULT 0
 );
 
@@ -50,13 +50,13 @@ CREATE TABLE crew (
 
 CREATE TABLE missions (
     mission_id      INTEGER PRIMARY KEY,
-    mission_type    VARCHAR(30) NOT NULL,       -- cargo | medevac | isr | training | sar | transport
+    mission_type    VARCHAR(30) NOT NULL,       -- cargo | medevac | organ_transport | charter | repositioning
     priority        VARCHAR(10) NOT NULL,       -- routine | urgent | critical
     requested_date  TIMESTAMP_NTZ NOT NULL,
     start_date      TIMESTAMP_NTZ,
     end_date        TIMESTAMP_NTZ,
     origin_base_id  INTEGER NOT NULL REFERENCES bases(base_id),
-    dest_base_id    INTEGER REFERENCES bases(base_id),  -- nullable for local ops (training, isr orbits)
+    dest_base_id    INTEGER REFERENCES bases(base_id),  -- nullable for local ops (repositioning)
     aircraft_id     INTEGER REFERENCES aircraft(aircraft_id),  -- nullable until assigned
     status          VARCHAR(20) NOT NULL DEFAULT 'planned',  -- planned | active | complete | cancelled
     pax_count       INTEGER,

@@ -48,6 +48,11 @@ Senior data engineer, strong Python/Snowflake/Azure, used LangChain before but n
   - Skip docstrings on trivial functions
   - Don't add "as a best practice" type comments
 
+  ## CRITICAL: This is a CIVILIAN fleet
+NO military aircraft, designators, ranks, roles, or mission types — ever.
+Aircraft: Bell 407, EC135, AW139, King Air 350, PC-12, Citation only.
+If you find yourself generating C-130/UH-60/MQ-9 or ranks like CPT/MAJ or roles like sensor_operator, STOP — that's wrong.
+
   ## Future enhancements (not in scope now)
 - Shift-aware staffing (12hr shifts, cross-shift handoffs, duty-time limits, coverage gaps at shift boundaries)
 - Maintenance consolidation feasibility config (which checks can be done together, at which bases)

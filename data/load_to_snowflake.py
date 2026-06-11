@@ -95,7 +95,7 @@ def load_table(cur, table):
 
     cur.execute(copy_sql)
 
-    # fix qualifications: Python repr ['C-130J', 'UH-60M'] -> valid JSON array
+    # fix qualifications: Python repr ['Bell 407', 'EC135'] -> valid JSON array
     if table == "crew":
         cur.execute("""
             UPDATE crew
