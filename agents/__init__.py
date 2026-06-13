@@ -1,4 +1,4 @@
 from .maintenance import forecast as maintenance_forecast
-from .weather import WeatherAgent
+from .weather import assess as weather_assess
 from .staffing import StaffingAgent
 from .demand import DemandAgent

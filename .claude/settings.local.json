@@ -7,7 +7,23 @@
       "Bash(py -m data.generate_synthetic)",
       "Bash(python3 -m data.generate_synthetic)",
       "Bash(py -3 -m data.generate_synthetic)",
-      "Bash(py -3 *)"
+      "Bash(py -3 *)",
+      "Bash(powershell -c \"\\(Get-Content agents/maintenance.py | Measure-Object -Line\\).Lines\")",
+      "Bash(powershell -c \"\\(Get-Content agents/weather.py | Measure-Object -Line\\).Lines\")",
+      "Bash(powershell -c \"\\(Get-Content agents/staffing.py | Measure-Object -Line\\).Lines\")",
+      "Bash(powershell -c \"\\(Get-Content agents/demand.py | Measure-Object -Line\\).Lines\")",
+      "Bash(powershell -c \"\\(Get-Content graph/workflow.py | Measure-Object -Line\\).Lines\")",
+      "Bash(powershell -c \"Test-Path README.md\")",
+      "Bash(git add *)",
+      "Bash(git commit *)",
+      "Bash(powershell -c \"if \\(Test-Path requirements.txt\\){Get-Content requirements.txt}\")",
+      "Bash(powershell -c \"if \\(Test-Path pyproject.toml\\){Get-Content pyproject.toml}\")",
+      "Bash(python -c \"import requests; print\\('requests', requests.__version__\\)\")",
+      "Bash(python -c \"import httpx; print\\('httpx', httpx.__version__\\)\")",
+      "Bash(py -V)",
+      "Bash(py -c \"import requests; print\\('requests', requests.__version__\\)\")",
+      "Bash(py -c \"import httpx; print\\('httpx', httpx.__version__\\)\")",
+      "Bash(py *)"
     ]
   }
 }

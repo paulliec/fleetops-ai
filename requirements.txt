@@ -2,6 +2,7 @@ anthropic
 cryptography
 langgraph
 snowflake-connector-python
+requests
 streamlit
 python-dotenv
 pytest
