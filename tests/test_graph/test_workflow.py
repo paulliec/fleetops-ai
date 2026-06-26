@@ -18,17 +18,21 @@ def _stub(agent, attr, fn):
 
 
 def _stub_all_ok():
-    """Stub all four agent entry points to return marker lists."""
+    """Stub all four agent entry points plus the orchestrator's synthesis, so
+    the wiring test runs without Snowflake or the LLM."""
     return [
         _stub(workflow.maintenance, "forecast", lambda: ["m1", "m2", "m3"]),
         _stub(workflow.weather, "assess", lambda: ["w1", "w2"]),
         _stub(workflow.demand, "forecast", lambda: ["d1", "d2"]),
         _stub(workflow.staffing, "assess", lambda: ["s1", "s2"]),
+        _stub(workflow.orch, "synthesize", lambda state: ["pkg"]),
+        _stub(workflow.orch, "to_dict", lambda pkgs: [{"region": "X"}]),
     ]
 
 
 def test_all_agents_present():
-    """Fan-out runs all four; fan-in merges every output into one state."""
+    """Fan-out runs all four; fan-in merges every output, then the orchestrator
+    synthesizes recommendations into state."""
     restore = _stub_all_ok()
     try:
         final = workflow.run()
@@ -40,6 +44,7 @@ def test_all_agents_present():
     assert final["weather"] == ["w1", "w2"]
     assert final["demand"] == ["d1", "d2"]
     assert final["staffing"] == ["s1", "s2"]
+    assert final["recommendations"] == [{"region": "X"}]
     assert final["errors"] == []
 
 

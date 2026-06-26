@@ -250,6 +250,31 @@ def forecast(conn=None) -> list[AircraftForecast]:
             conn.close()
 
 
+def to_dict(results: list[AircraftForecast]) -> list[dict]:
+    """JSON-serializable view — the orchestrator's input contract.
+
+    Per aircraft (not per base) — the orchestrator maps aircraft_id to its
+    home base / region for per-region synthesis.
+    """
+    return [
+        {
+            "aircraft_id": f.aircraft_id, "tail_number": f.tail_number,
+            "aircraft_type": f.aircraft_type, "total_hours": f.total_hours,
+            "rate_30d": f.rate_30d, "rate_90d": f.rate_90d,
+            "tempo_flag": f.tempo_flag,
+            "next_due": {
+                "category": f.next_due.category, "trigger": f.next_due.trigger,
+                "due_date": f.next_due.due_date.isoformat() if f.next_due.due_date else None,
+                "hours_remaining": f.next_due.hours_remaining,
+                "days_remaining": f.next_due.days_remaining,
+                "hard_ground": f.next_due.hard_ground,
+            },
+            "consolidation": [c.category for c in f.consolidation],
+        }
+        for f in results
+    ]
+
+
 # -- CLI output --------------------------------------------------------------
 
 def print_report(results: list[AircraftForecast]):

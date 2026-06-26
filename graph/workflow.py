@@ -26,6 +26,7 @@ from agents.maintenance import AircraftForecast
 from agents.weather import BaseForecast
 from agents.demand import BaseDemandForecast
 from agents.staffing import BaseCoverage
+from graph import orchestrator as orch
 
 
 class FleetState(TypedDict):
@@ -83,11 +84,14 @@ def staffing_node(state: FleetState) -> dict:
 
 
 def orchestrator_node(state: FleetState) -> dict:
-    # Fan-in join. All four agents' structured outputs are already merged into
-    # state by the time this runs; nothing to collect.
-    # TODO: step 5 - LLM ranks aircraft and reconciles conflicts across the
-    # four agents' outputs into `recommendations`.
-    return {}
+    # Fan-in join. Synthesize the four agents' outputs into ranked, grounded
+    # per-region decision packages (graph/orchestrator.py). Same failure
+    # isolation as the agent nodes — a synthesis failure is captured, not raised.
+    try:
+        packages = orch.synthesize(state)
+        return {"recommendations": orch.to_dict(packages)}
+    except Exception as e:
+        return {"errors": [{"agent": "orchestrator", "error": str(e)}]}
 
 
 # -- graph -------------------------------------------------------------------
@@ -131,4 +135,5 @@ if __name__ == "__main__":
     print(f"weather:     {_count(final['weather'])} bases")
     print(f"demand:      {_count(final['demand'])} bases")
     print(f"staffing:    {_count(final['staffing'])} bases")
+    print(f"recommendations: {_count(final['recommendations'])} packages")
     print(f"errors:      {final['errors']}")
