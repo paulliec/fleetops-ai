@@ -17,12 +17,19 @@ def _stub(agent, attr, fn):
     return lambda: setattr(agent, attr, orig)
 
 
-def test_both_agents_present():
-    """Fan-out runs both; fan-in merges both outputs into one state."""
-    restore = [
+def _stub_all_ok():
+    """Stub all four agent entry points to return marker lists."""
+    return [
         _stub(workflow.maintenance, "forecast", lambda: ["m1", "m2", "m3"]),
         _stub(workflow.weather, "assess", lambda: ["w1", "w2"]),
+        _stub(workflow.demand, "forecast", lambda: ["d1", "d2"]),
+        _stub(workflow.staffing, "assess", lambda: ["s1", "s2"]),
     ]
+
+
+def test_all_agents_present():
+    """Fan-out runs all four; fan-in merges every output into one state."""
+    restore = _stub_all_ok()
     try:
         final = workflow.run()
     finally:
@@ -31,34 +38,36 @@ def test_both_agents_present():
 
     assert final["maintenance"] == ["m1", "m2", "m3"]
     assert final["weather"] == ["w1", "w2"]
+    assert final["demand"] == ["d1", "d2"]
+    assert final["staffing"] == ["s1", "s2"]
     assert final["errors"] == []
 
 
 def test_single_failure_isolated():
-    """One node raising doesn't sink the run — other output survives,
-    failure is captured in state."""
+    """One node raising (demand) doesn't sink the run — the other three
+    outputs survive and the failure is captured in state."""
     def boom():
-        raise RuntimeError("snowflake timeout")
+        raise RuntimeError("cortex timeout")
 
-    restore = [
-        _stub(workflow.maintenance, "forecast", boom),
-        _stub(workflow.weather, "assess", lambda: ["w1", "w2"]),
-    ]
+    restore = _stub_all_ok()
+    restore.append(_stub(workflow.demand, "forecast", boom))
     try:
         final = workflow.run()
     finally:
         for r in restore:
             r()
 
-    assert final["maintenance"] is None          # failed agent left unset
-    assert final["weather"] == ["w1", "w2"]       # healthy agent intact
+    assert final["demand"] is None               # failed agent left unset
+    assert final["maintenance"] == ["m1", "m2", "m3"]   # other three intact
+    assert final["weather"] == ["w1", "w2"]
+    assert final["staffing"] == ["s1", "s2"]
     assert len(final["errors"]) == 1
-    assert final["errors"][0]["agent"] == "maintenance"
-    assert "snowflake timeout" in final["errors"][0]["error"]
+    assert final["errors"][0]["agent"] == "demand"
+    assert "cortex timeout" in final["errors"][0]["error"]
 
 
 if __name__ == "__main__":
-    test_both_agents_present()
-    print("PASS: both agents present, outputs merged")
+    test_all_agents_present()
+    print("PASS: all four agents present, outputs merged")
     test_single_failure_isolated()
-    print("PASS: single agent failure isolated, error captured in state")
+    print("PASS: single agent failure isolated, other three intact")
