@@ -1,0 +1,675 @@
+[
+  {
+    "package_id": 1,
+    "region": "Gulf Coast",
+    "action": "reposition_crew",
+    "priority_rank": 1,
+    "horizon_days": 0,
+    "confidence": 0.7,
+    "pillars_addressed": [
+      "staffing"
+    ],
+    "supporting_signals": {
+      "staffing": "3 of 9 aircraft crewable; short pilot x6"
+    },
+    "rationale": "Addressing the short pilot x6 staffing gap is critical to ensure operational readiness. With only 3 of 9 aircraft crewable, repositioning crew is essential to mitigate the risk of reduced capacity. This action has immediate impact and does not rely on weather forecasts.",
+    "logistics_cost_nm": null,
+    "generated_at": "2026-06-26T10:33:55.649000",
+    "feedback": null
+  },
+  {
+    "package_id": 101,
+    "region": "Gulf Coast",
+    "action": "schedule_maintenance",
+    "priority_rank": 2,
+    "horizon_days": 0,
+    "confidence": 1.0,
+    "pillars_addressed": [
+      "maintenance",
+      "weather"
+    ],
+    "supporting_signals": {
+      "maintenance": "N111PC PC-12 avionics hard ground",
+      "weather": "active no-fly window \u2014 natural downtime to absorb maintenance"
+    },
+    "rationale": "Utilizing the active no-fly window to perform maintenance on N111PC is a good opportunity to absorb downtime. This action addresses the avionics hard ground issue and takes advantage of the current weather conditions.",
+    "logistics_cost_nm": null,
+    "generated_at": "2026-06-26T10:33:56.437000",
+    "feedback": null
+  },
+  {
+    "package_id": 201,
+    "region": "Gulf Coast",
+    "action": "schedule_maintenance",
+    "priority_rank": 3,
+    "horizon_days": 0,
+    "confidence": 1.0,
+    "pillars_addressed": [
+      "maintenance",
+      "weather"
+    ],
+    "supporting_signals": {
+      "maintenance": "N116PC PC-12 avionics hard ground",
+      "weather": "active no-fly window \u2014 natural downtime to absorb maintenance"
+    },
+    "rationale": "Similar to action 1, scheduling maintenance for N116PC during the no-fly window is a good use of downtime. This action also addresses an avionics hard ground issue and aligns with the current weather conditions.",
+    "logistics_cost_nm": null,
+    "generated_at": "2026-06-26T10:33:57.115000",
+    "feedback": null
+  },
+  {
+    "package_id": 102,
+    "region": "Gulf Coast",
+    "action": "schedule_maintenance",
+    "priority_rank": 4,
+    "horizon_days": 0,
+    "confidence": 1.0,
+    "pillars_addressed": [
+      "maintenance",
+      "weather"
+    ],
+    "supporting_signals": {
+      "maintenance": "N129BH Bell 407 avionics hard ground",
+      "weather": "active no-fly window \u2014 natural downtime to absorb maintenance"
+    },
+    "rationale": "Performing maintenance on N129BH during the no-fly window is a reasonable choice, but it ranks lower due to the lower confidence in weather-driven actions. This action still addresses the avionics hard ground issue and utilizes the current downtime.",
+    "logistics_cost_nm": null,
+    "generated_at": "2026-06-26T10:33:57.685000",
+    "feedback": null
+  },
+  {
+    "package_id": 301,
+    "region": "Midwest",
+    "action": "schedule_maintenance",
+    "priority_rank": 1,
+    "horizon_days": 1,
+    "confidence": 0.989,
+    "pillars_addressed": [
+      "maintenance"
+    ],
+    "supporting_signals": {
+      "maintenance": "N134BH Bell 407 avionics due 1d"
+    },
+    "rationale": "N134BH Bell 407 avionics is due for maintenance in 1 day, addressing this now ensures continued airworthiness and prevents a potential grounding. This action also aligns with the Midwest Logistics Center's 35h flyable weather window.",
+    "logistics_cost_nm": null,
+    "generated_at": "2026-06-26T10:33:58.218000",
+    "feedback": null
+  },
+  {
+    "package_id": 401,
+    "region": "Midwest",
+    "action": "reposition_crew",
+    "priority_rank": 2,
+    "horizon_days": 0,
+    "confidence": 0.7,
+    "pillars_addressed": [
+      "staffing"
+    ],
+    "supporting_signals": {
+      "staffing": "2 of 8 aircraft crewable; short pilot x1"
+    },
+    "rationale": "Two aircraft are short a pilot, and repositioning a pilot locally addresses this gap immediately, ensuring two aircraft can become crewable. This action also aligns with the Midwest Logistics Center's 35h flyable weather window.",
+    "logistics_cost_nm": null,
+    "generated_at": "2026-06-26T10:33:58.870000",
+    "feedback": null
+  },
+  {
+    "package_id": 501,
+    "region": "Midwest",
+    "action": "reposition_crew",
+    "priority_rank": 3,
+    "horizon_days": 0,
+    "confidence": 0.7,
+    "pillars_addressed": [
+      "staffing"
+    ],
+    "supporting_signals": {
+      "staffing": "2 of 8 aircraft crewable; short copilot x1"
+    },
+    "rationale": "Two aircraft are short a copilot, and repositioning a copilot locally addresses this gap immediately, ensuring two aircraft can become crewable. This action also aligns with the Midwest Logistics Center's 35h flyable weather window.",
+    "logistics_cost_nm": null,
+    "generated_at": "2026-06-26T10:33:59.627000",
+    "feedback": null
+  },
+  {
+    "package_id": 103,
+    "region": "Midwest",
+    "action": "schedule_maintenance",
+    "priority_rank": 4,
+    "horizon_days": 2,
+    "confidence": 0.977,
+    "pillars_addressed": [
+      "maintenance"
+    ],
+    "supporting_signals": {
+      "maintenance": "N136EC EC135 avionics due 2d"
+    },
+    "rationale": "N136EC EC135 avionics is due for maintenance in 2 days, addressing this now ensures continued airworthiness. This action is lower priority due to the longer horizon.",
+    "logistics_cost_nm": null,
+    "generated_at": "2026-06-26T10:34:00.483000",
+    "feedback": null
+  },
+  {
+    "package_id": 104,
+    "region": "Midwest",
+    "action": "schedule_maintenance",
+    "priority_rank": 5,
+    "horizon_days": 2,
+    "confidence": 0.977,
+    "pillars_addressed": [
+      "maintenance"
+    ],
+    "supporting_signals": {
+      "maintenance": "N147AW AW139 avionics due 2d"
+    },
+    "rationale": "N147AW AW139 avionics is due for maintenance in 2 days, addressing this now ensures continued airworthiness. This action is lower priority due to the longer horizon.",
+    "logistics_cost_nm": null,
+    "generated_at": "2026-06-26T10:34:01.058000",
+    "feedback": null
+  },
+  {
+    "package_id": 202,
+    "region": "Midwest",
+    "action": "reposition_crew",
+    "priority_rank": 6,
+    "horizon_days": 0,
+    "confidence": 0.7,
+    "pillars_addressed": [
+      "staffing"
+    ],
+    "supporting_signals": {
+      "logistics": "reposition pilot from Gulf Coast (~570 nm)",
+      "staffing": "2 of 8 aircraft crewable; short pilot x1"
+    },
+    "rationale": "Repositioning a pilot from the Gulf Coast (~570 nm) is a lower priority due to the longer logistics lead time and lower confidence in the weather forecast.",
+    "logistics_cost_nm": 569.6,
+    "generated_at": "2026-06-26T10:34:01.640000",
+    "feedback": null
+  },
+  {
+    "package_id": 302,
+    "region": "Midwest",
+    "action": "reposition_crew",
+    "priority_rank": 7,
+    "horizon_days": 0,
+    "confidence": 0.7,
+    "pillars_addressed": [
+      "staffing"
+    ],
+    "supporting_signals": {
+      "logistics": "reposition copilot from Gulf Coast (~570 nm)",
+      "staffing": "2 of 8 aircraft crewable; short copilot x1"
+    },
+    "rationale": "Repositioning a copilot from the Gulf Coast (~570 nm) is a lower priority due to the longer logistics lead time and lower confidence in the weather forecast.",
+    "logistics_cost_nm": 569.6,
+    "generated_at": "2026-06-26T10:34:02.168000",
+    "feedback": null
+  },
+  {
+    "package_id": 2,
+    "region": "Midwest",
+    "action": "reposition_crew",
+    "priority_rank": 8,
+    "horizon_days": 0,
+    "confidence": 0.7,
+    "pillars_addressed": [
+      "staffing"
+    ],
+    "supporting_signals": {
+      "logistics": "reposition flight_nurse from Gulf Coast (~570 nm)",
+      "staffing": "2 of 8 aircraft crewable; short flight_nurse x4"
+    },
+    "rationale": "Repositioning a flight nurse from the Gulf Coast (~570 nm) is the lowest priority due to the no-rested-crew constraint and lower confidence in the weather forecast.",
+    "logistics_cost_nm": 569.6,
+    "generated_at": "2026-06-26T10:34:02.596000",
+    "feedback": null
+  },
+  {
+    "package_id": 502,
+    "region": "Midwest",
+    "action": "schedule_maintenance",
+    "priority_rank": 9,
+    "horizon_days": 0,
+    "confidence": 1.0,
+    "pillars_addressed": [
+      "maintenance"
+    ],
+    "supporting_signals": {
+      "maintenance": "N132BH Bell 407 avionics hard ground"
+    },
+    "rationale": "(not ranked by model; included by default)",
+    "logistics_cost_nm": null,
+    "generated_at": "2026-06-26T10:34:03.199000",
+    "feedback": null
+  },
+  {
+    "package_id": 105,
+    "region": "Mountain",
+    "action": "schedule_maintenance",
+    "priority_rank": 1,
+    "horizon_days": 0,
+    "confidence": 1.0,
+    "pillars_addressed": [
+      "maintenance"
+    ],
+    "supporting_signals": {
+      "maintenance": "N140EC EC135 avionics hard ground"
+    },
+    "rationale": "N140EC is currently grounded due to avionics hard ground issues, and scheduling maintenance is the only feasible action to address this. This action directly addresses the maintenance pillar and has a high operational value since it will get the aircraft back in service. Given the aircraft is already grounded, this action has a high confidence level and should be prioritized.",
+    "logistics_cost_nm": null,
+    "generated_at": "2026-06-26T10:34:03.737000",
+    "feedback": null
+  },
+  {
+    "package_id": 503,
+    "region": "Northeast",
+    "action": "schedule_maintenance",
+    "priority_rank": 1,
+    "horizon_days": 0,
+    "confidence": 1.0,
+    "pillars_addressed": [
+      "maintenance"
+    ],
+    "supporting_signals": {
+      "maintenance": "N109KB King Air 350 engine hard ground"
+    },
+    "rationale": "N109KB is grounded due to engine hard ground, which is a high-severity maintenance issue that needs immediate attention to ensure safety and minimize downtime. Addressing this issue first will help restore aircraft availability and reduce the risk of further complications.",
+    "logistics_cost_nm": null,
+    "generated_at": "2026-06-26T10:34:04.199000",
+    "feedback": null
+  },
+  {
+    "package_id": 504,
+    "region": "Northeast",
+    "action": "reposition_crew",
+    "priority_rank": 2,
+    "horizon_days": 0,
+    "confidence": 0.7,
+    "pillars_addressed": [
+      "staffing"
+    ],
+    "supporting_signals": {
+      "staffing": "2 of 4 aircraft crewable; short pilot x1"
+    },
+    "rationale": "Two aircraft are short a pilot, which is a critical staffing gap that needs to be addressed to ensure operational capacity. Repositioning a pilot will help restore crew availability and minimize the impact on demand.",
+    "logistics_cost_nm": null,
+    "generated_at": "2026-06-26T10:34:04.649000",
+    "feedback": null
+  },
+  {
+    "package_id": 3,
+    "region": "Northeast",
+    "action": "reposition_crew",
+    "priority_rank": 3,
+    "horizon_days": 0,
+    "confidence": 0.7,
+    "pillars_addressed": [
+      "staffing"
+    ],
+    "supporting_signals": {
+      "staffing": "2 of 4 aircraft crewable; short flight_paramedic x1"
+    },
+    "rationale": "Two aircraft are short a flight paramedic, which is a critical staffing gap that needs to be addressed to ensure operational capacity. Repositioning a flight paramedic will help restore crew availability and minimize the impact on demand.",
+    "logistics_cost_nm": null,
+    "generated_at": "2026-06-26T10:34:05.397000",
+    "feedback": null
+  },
+  {
+    "package_id": 106,
+    "region": "Northeast",
+    "action": "schedule_maintenance",
+    "priority_rank": 4,
+    "horizon_days": 12,
+    "confidence": 0.871,
+    "pillars_addressed": [
+      "maintenance"
+    ],
+    "supporting_signals": {
+      "maintenance": "N139EC EC135 airframe due 12d"
+    },
+    "rationale": "N139EC has an airframe maintenance due in 12 days, which is a lower-severity issue compared to the grounded N109KB. Addressing this issue will help maintain aircraft airworthiness and prevent future downtime.",
+    "logistics_cost_nm": null,
+    "generated_at": "2026-06-26T10:34:05.794000",
+    "feedback": null
+  },
+  {
+    "package_id": 4,
+    "region": "Northeast",
+    "action": "reposition_crew",
+    "priority_rank": 5,
+    "horizon_days": 0,
+    "confidence": 0.7,
+    "pillars_addressed": [
+      "staffing"
+    ],
+    "supporting_signals": {
+      "logistics": "reposition pilot from Gulf Coast (~1234 nm)",
+      "staffing": "2 of 4 aircraft crewable; short pilot x1"
+    },
+    "rationale": "Repositioning a pilot from the Gulf Coast is a lower-priority option due to the long distance and logistics involved. This option is less desirable compared to repositioning a pilot from a closer location.",
+    "logistics_cost_nm": 1233.7,
+    "generated_at": "2026-06-26T10:34:06.221000",
+    "feedback": null
+  },
+  {
+    "package_id": 303,
+    "region": "Northeast",
+    "action": "reposition_crew",
+    "priority_rank": 6,
+    "horizon_days": 0,
+    "confidence": 0.7,
+    "pillars_addressed": [
+      "staffing"
+    ],
+    "supporting_signals": {
+      "logistics": "reposition flight_paramedic from Gulf Coast (~1234 nm)",
+      "staffing": "2 of 4 aircraft crewable; short flight_paramedic x1"
+    },
+    "rationale": "Repositioning a flight paramedic from the Gulf Coast is a lower-priority option due to the long distance and logistics involved. This option is less desirable compared to repositioning a flight paramedic from a closer location.",
+    "logistics_cost_nm": 1233.7,
+    "generated_at": "2026-06-26T10:34:06.684000",
+    "feedback": null
+  },
+  {
+    "package_id": 402,
+    "region": "Southeast",
+    "action": "prestage_for_demand",
+    "priority_rank": 1,
+    "horizon_days": 0,
+    "confidence": 0.546,
+    "pillars_addressed": [
+      "demand",
+      "staffing"
+    ],
+    "supporting_signals": {
+      "demand": "Southeast Medevac Center 6.4/day [3.6,9.2]",
+      "staffing": "0 of 6 aircraft crewable"
+    },
+    "rationale": "This action addresses the immediate demand of 6.4/day at Southeast Medevac Center, which has a high demand variance [3.6,9.2], and also addresses the staffing gap of 0 crewable aircraft.",
+    "logistics_cost_nm": null,
+    "generated_at": "2026-06-26T10:34:07.231000",
+    "feedback": {
+      "note": "Clear call - prestage despite the coverage gap",
+      "rating": "up"
+    }
+  },
+  {
+    "package_id": 505,
+    "region": "Southeast",
+    "action": "reposition_crew",
+    "priority_rank": 2,
+    "horizon_days": 0,
+    "confidence": 0.7,
+    "pillars_addressed": [
+      "staffing"
+    ],
+    "supporting_signals": {
+      "staffing": "0 of 6 aircraft crewable; short copilot x3"
+    },
+    "rationale": "This action addresses the staffing gap of 0 crewable aircraft, specifically the shortage of copilots x3, which is a critical resource for flight operations.",
+    "logistics_cost_nm": null,
+    "generated_at": "2026-06-26T10:34:07.745000",
+    "feedback": null
+  },
+  {
+    "package_id": 601,
+    "region": "Southeast",
+    "action": "reposition_crew",
+    "priority_rank": 3,
+    "horizon_days": 0,
+    "confidence": 0.7,
+    "pillars_addressed": [
+      "staffing"
+    ],
+    "supporting_signals": {
+      "staffing": "0 of 6 aircraft crewable; short pilot x2"
+    },
+    "rationale": "This action addresses the staffing gap of 0 crewable aircraft, specifically the shortage of pilots x2, which is a critical resource for flight operations.",
+    "logistics_cost_nm": null,
+    "generated_at": "2026-06-26T10:34:08.287000",
+    "feedback": null
+  },
+  {
+    "package_id": 602,
+    "region": "Southeast",
+    "action": "reposition_crew",
+    "priority_rank": 4,
+    "horizon_days": 0,
+    "confidence": 0.7,
+    "pillars_addressed": [
+      "staffing"
+    ],
+    "supporting_signals": {
+      "staffing": "0 of 6 aircraft crewable; short flight_paramedic x1"
+    },
+    "rationale": "This action addresses the staffing gap of 0 crewable aircraft, specifically the shortage of flight paramedics x1, which is a critical resource for medical transport operations.",
+    "logistics_cost_nm": null,
+    "generated_at": "2026-06-26T10:34:09.034000",
+    "feedback": null
+  },
+  {
+    "package_id": 107,
+    "region": "Southeast",
+    "action": "reposition_crew",
+    "priority_rank": 5,
+    "horizon_days": 1,
+    "confidence": 0.666,
+    "pillars_addressed": [
+      "staffing"
+    ],
+    "supporting_signals": {
+      "logistics": "reposition copilot from Gulf Coast (~615 nm)",
+      "staffing": "0 of 6 aircraft crewable; short copilot x3"
+    },
+    "rationale": "This action addresses the staffing gap of 0 crewable aircraft, specifically the shortage of copilots x3, but requires repositioning from Gulf Coast (~615 nm), which may take longer to execute.",
+    "logistics_cost_nm": 614.9,
+    "generated_at": "2026-06-26T10:34:09.440000",
+    "feedback": null
+  },
+  {
+    "package_id": 108,
+    "region": "Southeast",
+    "action": "reposition_crew",
+    "priority_rank": 6,
+    "horizon_days": 1,
+    "confidence": 0.666,
+    "pillars_addressed": [
+      "staffing"
+    ],
+    "supporting_signals": {
+      "logistics": "reposition pilot from Gulf Coast (~615 nm)",
+      "staffing": "0 of 6 aircraft crewable; short pilot x2"
+    },
+    "rationale": "This action addresses the staffing gap of 0 crewable aircraft, specifically the shortage of pilots x2, but requires repositioning from Gulf Coast (~615 nm), which may take longer to execute.",
+    "logistics_cost_nm": 614.9,
+    "generated_at": "2026-06-26T10:34:09.930000",
+    "feedback": null
+  },
+  {
+    "package_id": 109,
+    "region": "Southeast",
+    "action": "reposition_crew",
+    "priority_rank": 7,
+    "horizon_days": 1,
+    "confidence": 0.666,
+    "pillars_addressed": [
+      "staffing"
+    ],
+    "supporting_signals": {
+      "logistics": "reposition flight_paramedic from Gulf Coast (~615 nm)",
+      "staffing": "0 of 6 aircraft crewable; short flight_paramedic x1"
+    },
+    "rationale": "This action addresses the staffing gap of 0 crewable aircraft, specifically the shortage of flight paramedics x1, but requires repositioning from Gulf Coast (~615 nm), which may take longer to execute.",
+    "logistics_cost_nm": 614.9,
+    "generated_at": "2026-06-26T10:34:11.020000",
+    "feedback": null
+  },
+  {
+    "package_id": 110,
+    "region": "Southeast",
+    "action": "reposition_aircraft",
+    "priority_rank": 8,
+    "horizon_days": 2,
+    "confidence": 0.634,
+    "pillars_addressed": [
+      "staffing",
+      "demand"
+    ],
+    "supporting_signals": {
+      "logistics": "reposition aircraft from Mountain (~1043 nm)",
+      "staffing": "0 of 6 aircraft crewable"
+    },
+    "rationale": "This action addresses the staffing gap of 0 crewable aircraft and demand, but requires repositioning an aircraft from Mountain (~1043 nm), which may take longer to execute and has lower confidence due to weather uncertainty.",
+    "logistics_cost_nm": 1043.4,
+    "generated_at": "2026-06-26T10:34:11.450000",
+    "feedback": null
+  },
+  {
+    "package_id": 403,
+    "region": "Southwest",
+    "action": "prestage_for_demand",
+    "priority_rank": 1,
+    "horizon_days": 3,
+    "confidence": 0.458,
+    "pillars_addressed": [
+      "demand",
+      "staffing"
+    ],
+    "supporting_signals": {
+      "demand": "Southwest Regional Hub 7.8/day [4.0,11.6]",
+      "staffing": "3 of 7 aircraft crewable"
+    },
+    "rationale": "High demand at Southwest Regional Hub (7.8/day [4.0,11.6]) and only 3 of 7 aircraft are crewable, making prestaging for demand a high priority to ensure adequate coverage.",
+    "logistics_cost_nm": null,
+    "generated_at": "2026-06-26T10:34:11.914000",
+    "feedback": null
+  },
+  {
+    "package_id": 701,
+    "region": "Southwest",
+    "action": "reposition_crew",
+    "priority_rank": 2,
+    "horizon_days": 1,
+    "confidence": 0.666,
+    "pillars_addressed": [
+      "staffing"
+    ],
+    "supporting_signals": {
+      "staffing": "3 of 7 aircraft crewable; short pilot x4"
+    },
+    "rationale": "Shortage of pilots (short pilot x4) at Southwest Regional Hub, which has high demand, makes repositioning crew a high priority to mitigate the gap.",
+    "logistics_cost_nm": null,
+    "generated_at": "2026-06-26T10:34:12.390000",
+    "feedback": null
+  },
+  {
+    "package_id": 304,
+    "region": "Southwest",
+    "action": "reposition_crew",
+    "priority_rank": 3,
+    "horizon_days": 1,
+    "confidence": 0.666,
+    "pillars_addressed": [
+      "staffing"
+    ],
+    "supporting_signals": {
+      "logistics": "reposition pilot from Gulf Coast (~891 nm)",
+      "staffing": "3 of 7 aircraft crewable; short pilot x4"
+    },
+    "rationale": "Alternative to action 5, repositioning a pilot from Gulf Coast (~891 nm) is a viable option to address the pilot shortage, but with a longer logistics tail.",
+    "logistics_cost_nm": 890.9,
+    "generated_at": "2026-06-26T10:34:13.155000",
+    "feedback": null
+  },
+  {
+    "package_id": 305,
+    "region": "Southwest",
+    "action": "reposition_crew",
+    "priority_rank": 4,
+    "horizon_days": 1,
+    "confidence": 0.666,
+    "pillars_addressed": [
+      "staffing"
+    ],
+    "supporting_signals": {
+      "staffing": "3 of 7 aircraft crewable; short copilot x1"
+    },
+    "rationale": "Shortage of copilots (short copilot x1) at Southwest Regional Hub, while less severe than pilot shortage, still requires attention to ensure adequate crewing.",
+    "logistics_cost_nm": null,
+    "generated_at": "2026-06-26T10:34:13.869000",
+    "feedback": null
+  },
+  {
+    "package_id": 5,
+    "region": "Southwest",
+    "action": "reposition_crew",
+    "priority_rank": 5,
+    "horizon_days": 1,
+    "confidence": 0.666,
+    "pillars_addressed": [
+      "staffing"
+    ],
+    "supporting_signals": {
+      "logistics": "reposition copilot from Gulf Coast (~891 nm)",
+      "staffing": "3 of 7 aircraft crewable; short copilot x1"
+    },
+    "rationale": "Alternative to action 7, repositioning a copilot from Gulf Coast (~891 nm) is a viable option to address the copilot shortage, but with a longer logistics tail.",
+    "logistics_cost_nm": 890.9,
+    "generated_at": "2026-06-26T10:34:14.289000",
+    "feedback": null
+  },
+  {
+    "package_id": 603,
+    "region": "Southwest",
+    "action": "schedule_maintenance",
+    "priority_rank": 6,
+    "horizon_days": 3,
+    "confidence": 0.966,
+    "pillars_addressed": [
+      "maintenance"
+    ],
+    "supporting_signals": {
+      "maintenance": "N137EC EC135 avionics hard ground"
+    },
+    "rationale": "N137EC EC135 avionics hard ground requires maintenance, but with 72h flyable weather at Southwest Regional Hub, this can be addressed within the maintenance window.",
+    "logistics_cost_nm": null,
+    "generated_at": "2026-06-26T10:34:14.769000",
+    "feedback": null
+  },
+  {
+    "package_id": 111,
+    "region": "Southwest",
+    "action": "schedule_maintenance",
+    "priority_rank": 7,
+    "horizon_days": 3,
+    "confidence": 0.966,
+    "pillars_addressed": [
+      "maintenance"
+    ],
+    "supporting_signals": {
+      "maintenance": "N143AW AW139 avionics hard ground"
+    },
+    "rationale": "N143AW AW139 avionics hard ground requires maintenance, but with 72h flyable weather at Southwest Regional Hub, this can be addressed within the maintenance window.",
+    "logistics_cost_nm": null,
+    "generated_at": "2026-06-26T10:34:15.245000",
+    "feedback": null
+  },
+  {
+    "package_id": 404,
+    "region": "Southwest",
+    "action": "schedule_maintenance",
+    "priority_rank": 8,
+    "horizon_days": 3,
+    "confidence": 0.966,
+    "pillars_addressed": [
+      "maintenance"
+    ],
+    "supporting_signals": {
+      "maintenance": "N144AW AW139 engine due 3d"
+    },
+    "rationale": "N144AW AW139 engine due 3d requires maintenance, but with 72h flyable weather at Southwest Regional Hub, this can be addressed within the maintenance window, but with lower priority due to the longer horizon.",
+    "logistics_cost_nm": null,
+    "generated_at": "2026-06-26T10:34:15.731000",
+    "feedback": null
+  }
+]
