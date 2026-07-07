@@ -10,3 +10,5 @@ build/
 *.p8
 *.pub
 rsa_key*
+.claude/
+Claude.md
